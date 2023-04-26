@@ -14,7 +14,7 @@ def CleanNum(num):
         num=num.replace('.','')
         return num
     else:
-        raise Exception("Man just put it in like a normie")
+        raise Exception("Man just put it in normal, with the area code and all that ('1-234-5678'), I can't be bothered to figure out how to clean this up better without more research than I'm willing to do for a meme")
 
 
 def Stop(phonenum):
@@ -31,12 +31,12 @@ def Stop(phonenum):
     else:
         sent=f'The script ran in {seconds} seconds.  Such speed!'
     
-    account_sid = "AC5b354b171acb19895bfd41c3302b34d2"
-    auth_token = "59635563c98e24ad8608e60f64a438af"
+    account_sid = "INSERT YOUR OWN TWILIO ACCOUNT SID HERE"
+    auth_token = "INSERT YOUR TWILIO AUTHENTICATION TOKEN HERE"
     client = Client(account_sid, auth_token)
     message = client.messages.create(
     body=sent,
-    from_="+18449925528",
+    from_="INSERT YOUR OWN TWILIO PHONE NUMBER HERE",
     to=f"{phonenum}"
     )
 
